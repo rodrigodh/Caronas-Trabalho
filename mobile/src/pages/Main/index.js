@@ -29,7 +29,7 @@ export default function Main({ navigation }) {
   }, []);
 
   subscribeToEvents = (user_id) => {
-    const io = socket("http://192.168.0.174:3333", {
+    const io = socket("https://caronas-backend.herokuapp.com", {
       query: { user_id }
     });
 

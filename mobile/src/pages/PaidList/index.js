@@ -27,7 +27,7 @@ export default function PaidList({ navigation }) {
   }, []);
 
   subscribeToEvents = () => {
-    const io = socket("http://192.168.0.174:3333");
+    const io = socket("https://caronas-backend.herokuapp.com");
 
     io.on("pago", () => {
       setLoading(true);

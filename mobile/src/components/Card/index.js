@@ -15,41 +15,42 @@ import {
   ActionText
 } from "./styles";
 
+function fixData(data) {
+  var today = data;
+  var arr = today.split('-');
+
+  var yy = arr[0];
+  var mm = arr[1];
+  var dd = arr[2].split('T');
+  var dd = dd[0];
+
+  today = dd + '/' + mm + '/' + yy;
+
+  return today
+}
+
+async function handlePaid(id) {
+  const response = await api.post(`/payrun/${id}`);
+
+  const { name } = response.data;
+
+  Alert.alert(`A Anotação de ${name} foi paga com sucesso!`);
+}
+
+async function handleRemove(id) {
+  const response = await api.post("/deleteruns", {
+    id
+  });
+
+  console.log(id);
+  const { message } = response.data;
+
+  Alert.alert(message);
+}
+
 function Card({ data, navigation }) {
-  async function handlePaid(id) {
-    const response = await api.post(`/payrun/${id}`);
-
-    const { name } = response.data;
-
-    Alert.alert(`A Anotação de ${name} foi paga com sucesso!`);
-  }
-
-  function fixData(data) {
-    var today = data;
-    var arr = today.split('-');
-
-    var yy = arr[0];
-    var mm = arr[1];
-    var dd = arr[2].split('T');
-    var dd = dd[0];
-
-    today = dd + '/' + mm + '/' + yy;
-
-    return today
-  }
-
-  async function handleRemove(id) {
-    const response = await api.post("/deleteruns", {
-      id
-    });
-
-    console.log(id);
 
 
-    const { message } = response.data;
-
-    Alert.alert(message);
-  }
   const {
     state: { routeName }
   } = navigation;
