@@ -12,3 +12,4 @@ diferente pode não fazer sentido. (Abo é o nome da empresa em que trabalhei he
 ![Tela para adicionar anotação](https://i.imgur.com/tjZcxuq.png)
 
 Apenas criei o aplicativo com o intuito de aprender mais sobre a ferramente React Native e consequentemente todo ecosistema node,
+consquentemente também consegui facilitar meu dia-a-dia.
