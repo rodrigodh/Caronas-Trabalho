@@ -1,4 +1,4 @@
-# Caronas ABO
+# App organizador de caronas recebidas para o trabalho
 Desenvolvido com React Native e NodeJS, pode ser utilizado para anotações em uma menor escala de pessoas.
 * Criado com o propósito de organizar as caronas que recebia, funcionou perfeitamente dentro do contexto, porem em um contexto
 diferente pode não fazer sentido. (Abo é o nome da empresa em que trabalhei hehe)
